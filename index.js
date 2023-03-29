@@ -4,8 +4,8 @@ let mysql = require("mysql");
 
 let app = express();
 app.use(express.static("public"));
-app.use(bodyparser.json({limit:'50mb'}));
-app.use(bodyparser.urlencoded({limit:'50mb', extended:true}));
+app.use(bodyparser.json({limit:'500mb'}));
+app.use(bodyparser.urlencoded({limit:'500mb', extended:true}));
 app.use(express.json());
 
 app.use((req, res, next) => {
