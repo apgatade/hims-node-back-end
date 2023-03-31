@@ -74,5 +74,17 @@ class Ipdservice{
         })
     }
 
+    getrates(categoryid,ipdservicesid){
+        this.sql ="SELECT I.*, CSR.rate AS categoryrate FROM ipdservices AS I LEFT OUTER JOIN categorywiseipdservicerates AS CSR ON I.id = CSR.ipdserviceid AND CSR.categoryid = 1 ORDER BY I.srno";
+               return new Promise((resolve, reject)=>{
+            this.db.query(this.sql).then((result)=>{
+                resolve(result);
+            }, (err)=>{
+                reject(err);
+            })
+        })
+    }
+
+
 }
 module.exports = Ipdservice;

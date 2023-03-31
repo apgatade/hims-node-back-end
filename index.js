@@ -49,6 +49,8 @@ app.use("/rooms", require("./routes/rooms"));
 app.use("/specializations", require("./routes/specializations"));
 app.use("/usertypes", require("./routes/usertypes"));
 app.use("/pharmacy/items", require("./routes/pharmacy/items"));
+app.use("/doctors", require("./routes/doctors"));
+
 
 
 

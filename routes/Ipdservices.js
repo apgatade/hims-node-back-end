@@ -72,4 +72,14 @@ router.delete("/:id", (req, res)=>{
         res.end(JSON.stringify({status:"failed", data:err}));
     })
 })
+
+router.get("/getrates/:categoryid/:ipdservicesid", (req, res)=>{
+    let object = new Ipdservice();
+    object.getrates(req.params.categoryid, req.params.ipdservicesid).then((result)=>{
+        res.end(JSON.stringify({status:"success", data:result}));
+    }, (err)=>{
+        res.end(JSON.stringify({status:"failed", data:err}));
+    })
+    
+})
 module.exports = router;
