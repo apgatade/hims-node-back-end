@@ -37,10 +37,10 @@ class Doctor{
         this.sql += "birthdate, doctortype, departmentid, specializationid, casepaperdays, ";
         this.sql += "bankaccountno, ifsccode, mobileno, email, address, isactive) ";
         this.sql += "VALUES (" + this.titleid + ", '" + this.fname + "', '" + this.mname + "', '" + this.lname + "', ";
-        this.sql += "'" + this.qualification + "', " + this.regno + ", " + this.panno + ", " + this.birthdate + ", ";
+        this.sql += "'" + this.qualification + "', '" + this.regno + "', '" + this.panno + "', '" + this.birthdate + "', ";
         this.sql += "'" + this.doctortype + "', " + this.departmentid + ", " + this.specializationid + ", ";
-        this.sql += "" + this.casepaperdays + ", " + this.bankaccountno + ", '" + this.ifsccode + "', ";
-        this.sql += "" + this.mobileno + ", '" + this.email + "', '" + this.address + "', " + this.isactive + ")";
+        this.sql += "" + this.casepaperdays + ", '" + this.bankaccountno + "', '" + this.ifsccode + "', ";
+        this.sql += "'" + this.mobileno + "', '" + this.email + "', '" + this.address + "', " + this.isactive + ")";
         //  console.log(this.sql);
     }
     else{
@@ -91,4 +91,10 @@ delete(){
 
 }
 
-module.exports = Doctor
+module.exports = Doctor  
+
+
+
+
+
+
